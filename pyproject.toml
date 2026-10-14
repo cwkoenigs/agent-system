@@ -1,0 +1,14 @@
+[project]
+name = "agent-system"
+version = "0.1.0"
+description = "Dispatcher: pops tasks, runs the tier ladder in a worktree, records metrics, writes the MR summary and the morning digest"
+requires-python = ">=3.12"
+dependencies = ["pyyaml>=6"]
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+pythonpath = ["."]
